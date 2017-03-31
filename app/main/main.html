@@ -1,0 +1,15 @@
+<section class="our-work" id="our-work">
+	<div class="search-form">
+		<form>
+			<input type="text" placeholder="Search for artist or album" ng-model="searchText" ng-change="clearSearch()">
+			<a ng-click="search()" style="cursor:pointer"  class="btn">Search <i class="fa fa-refresh fa-spin-custom" ng-if="loading"></i></a>
+		</form>
+	</div>
+	<div class="search-placeholder" style="width:100%;background-image: url(assets/img/Magnify@2x.png);background-size: 150px 150px;background-repeat: no-repeat;background-position:50% 30%;background-origin: content-box;display: flex;justify-content: center;" ng-if="data.length==0"><p style="color:#8f8f8f;font-size:13pt;">Your result will appear here </p></div>		
+	<div class="grid" ng-if="data.length>0 || data.length>0">
+		<item-card ng-repeat="item in data" data="item"></item-card>
+	</div>
+	<div class="more" style="width:100%;align-items: center;padding:15px;text-align: center;" ng-if="data.length>0">
+		<a ng-click="search()" style="cursor:pointer" class="btn">Show me more <i class="fa fa-refresh fa-spin-custom" ng-if="loading"></i></a>
+	</div>
+</section>
