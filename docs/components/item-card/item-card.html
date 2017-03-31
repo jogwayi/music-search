@@ -1,0 +1,14 @@
+<img src="assets/img/album-icon@2x.png" alt=""  class="item-album-icon" ng-if="$ctrl.data.type=='album'">
+<img src="assets/img/artist-icon@2x.png" alt="" class="item-artist-icon" ng-if="$ctrl.data.type=='artist'">
+<img src="{{$ctrl.data.images[0].url}}"  class="img" id="{{$ctrl.data.id}}" alt="Avatar" style="width:100%" ng-if="$ctrl.data.images[0].url" ng-click="getDetails($ctrl.data)">
+<img src="assets/img/hero.jpg" class="img" id="{{$ctrl.data.id}}" alt="Avatar" style="width:100%" ng-if="!$ctrl.data.images[0].url" ng-click="getDetails($ctrl.data)">
+<div class="overlay desktop" ng-click="getDetails($ctrl.data)">
+    <img src="assets/img/Bitmap@2x.png">
+    <div class="text">View {{$ctrl.data.type=='artist' ? 'Ablums' : 'Tracks'}}</div>
+  </div>
+<div class="container" ng-click="getDetails($ctrl.data)">
+    <h4 ng-if="displayContents" style="color:gray"> {{$ctrl.data.type=='artist' ? 'Ablums by' : 'Tracks in '}}</h4> 
+    <h4>{{$ctrl.data.name}}</h4> 
+    <i class="fa fa-3x fa-refresh fa-spin-custom" ng-if="loading" style="color:#c34374;position:absolute;bottom:20px;right:20px;"></i>
+</div>
+

@@ -1,0 +1,587 @@
+
+@font-face {
+    font-family: "Raleway-Regular";
+    src: url(../fonts/raleway/Raleway-Regular.ttf) format("truetype");
+}
+ /*-------------
+ 	General
+-------------*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	font: normal 16px sans-serif;
+	color: #555;
+}
+
+ul, nav{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+
+	opacity: 0.9;
+}
+
+a:hover{
+	opacity: 1;
+}
+
+a.btn{
+	color: #fff;
+	border-radius: 4px;
+	text-transform: uppercase;
+	background-color: #c34374;
+	font-weight: 800;
+	text-align: center;
+}
+
+hr{
+	width: 150px;
+	height: 2px;
+	background-color: #c34374;
+	border: 0;
+	margin-bottom: 80px;
+}
+
+section{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: "Raleway-Regular";
+	padding: 125px 100px;
+}
+ 
+@media (max-width: 1000px){
+
+	section{
+		padding: 100px 50px;
+	}
+
+}
+
+@media (max-width: 600px){
+
+	section{
+		padding: 80px 30px;
+	}
+
+}
+
+section h3.title{
+	color: #414a4f;
+	text-transform: capitalize; 
+	font: bold 32px 'Open Sans', sans-serif;
+	margin-bottom: 35px;
+	text-align: center;
+}
+
+section p{
+	max-width: 800px;
+	text-align: center;
+	margin-bottom: 35px;
+	padding: 0 20px;
+	line-height: 2;
+}
+
+.grid{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+
+/*-------------
+ 	Header
+-------------*/
+
+header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #fff;
+	padding: 35px 100px 0;
+}
+
+header h2{
+	font-family: 'Raleway-Regular', sans-serif;
+}
+
+header nav{
+	display: flex;
+}
+
+header nav li{
+	margin: 0 15px;
+}
+
+header nav li:first-child{
+	margin-left: 0;	
+}
+
+header nav li:last-child{
+	margin-right: 0;	
+}
+
+
+
+@media (max-width: 1000px){
+	header{
+		padding: 20px 50px;
+	}
+}
+
+
+@media (max-width: 700px){
+	
+
+	header h2{
+		margin-bottom: 15px;
+	}
+}
+
+
+
+/*----------------
+ 	Hero Section
+----------------*/
+
+.hero{
+	position: relative;
+	justify-content: center;
+	min-height: 100vh;
+	color: #fff;
+	text-align: center;
+}
+
+.hero .background-image{
+	position: absolute;
+	background-color: #c34374;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	z-index: -1;
+	
+}
+
+.hero .background-image:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.hero h1{
+	font: bold 60px 'Open Sans', sans-serif;
+	margin-bottom: 15px;
+}
+
+.hero h3{
+	font: normal 28px 'Open Sans', sans-serif;
+	margin-bottom: 40px;
+}
+
+.hero a.btn{
+	padding: 0px 0px;
+	position: absolute;
+	bottom:25px;
+}
+
+@media (max-width: 800px){
+
+	/*.hero{
+		min-height: 600px;
+	}*/
+
+	.hero h1{
+		font-size: 48px;
+	}
+
+	.hero h3{
+		font-size: 24px;
+	}
+
+	 
+
+}
+
+
+
+/*--------------------
+ 	Our Work Section
+---------------------*/
+
+.our-work{
+	background-color: #383a49;
+	padding:0px;
+}
+.our-work .search-form{
+	width:100%;
+	background-color: #333441;
+	text-align:center;
+	padding:15px;
+}
+.our-work form{
+	background-color:#fff;
+	display:flex;
+	width:60%;
+	margin:auto;
+	flex-direction:row;
+	border-radius:35px;
+	padding:5px 10px;
+}
+.our-work form input:focus{
+	border:none;
+	outline-width: 0;
+}
+
+.our-work form input{
+	padding: 5px;
+	border-radius:15px;
+	flex: 1;
+	margin-right: 30px;
+	font-size: 18px;
+	color: #555;
+	border:none;
+}
+
+.our-work form .btn,.more .btn{
+	padding: 10px 30px;
+	border-radius:30px;
+	font-family: 'Raleway-Regular', sans-serif;
+	font-size: 10pt;
+}
+.our-work .grid li{
+	padding: 20px;
+	height: 350px;
+	border-radius: 3px;
+
+	background-clip: content-box;
+	background-size: cover;
+	background-position: center;
+	background-color: #333;
+}
+
+@media only screen and (min-width : 320px) {
+	.our-work .grid li.small,.our-work .grid item-card{
+		flex-basis: 90%;
+	}
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+	.our-work .grid li.small,.our-work .grid item-card{
+		flex-basis: 45%;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	.our-work .grid li.small,.our-work .grid item-card{
+		flex-basis: 20%;
+	}
+}
+
+@media (max-width: 650px){
+
+	.our-work form{
+		display:block;
+		width:100%;
+		background-color:#333441;
+		text-align: center;
+	}
+
+	.our-work form input{
+		border-radius:35px;
+		padding:10px;
+		width:90%;
+		margin:auto;
+	}
+	.our-work form a.btn {
+		display:block;
+		margin:auto;
+		margin-top:10px;
+		clear: both; 
+		width:60%;
+		background-color: #d05d84;
+		font-size: 13pt;
+		padding:18px 30px;
+	}
+
+}
+
+/*-------------
+ 	Footer
+-------------*/
+
+footer{
+	align-items: center;
+	text-align: center;
+	color: #fff;
+	background-color: #333441;
+	padding: 15px 0;
+}
+footer p{
+	font-size: 14px;
+	text-align: center;
+	color: rgba(255,255,255,1);
+	margin-bottom: 10px;
+	font-family: "Raleway-Regular";
+}
+.sweet-alert h2{
+	margin:0px;
+	display:none;
+}
+.music-list-items{
+	max-height:40vh;
+	overflow-y: auto;
+}
+.list-item{
+	width:100%;
+}
+.list-item h4,.list-item h5,h4.list-title{
+	color:black;
+	font-weight:200px;
+	text-align:left;
+	padding:5px;
+	padding-left:20px;
+	font-family: "Raleway-Regular";
+}
+.list-item h5{
+	color:#414a4f;
+	font-size: 8pt;
+}
+
+/* Extra Small Devices, Phones */ 
+/* Small Devices, Tablets */
+@media (max-width: 768px){
+	.desktop{
+		display:none;
+	}
+	.our-work .search-placeholder{
+		height:65vh;
+	}
+	.our-work .search-placeholder p{
+		margin-top:40vh;
+	}
+	.mobile{
+		display: block;
+	}
+	item-card {
+		position: relative;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		transition: 0.3s;
+		border-radius: 2px;
+		background-color: #fff;
+		height: 80px;
+		display:flex;
+		flex-direction: row;
+		margin:12px;
+	}
+
+	item-card:hover {
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	}
+	item-card .item-artist-icon{
+		position:absolute;
+		left:5px;
+		top:55px;
+		width:20px !important;
+		max-height:20px !important;
+		background:transparent;
+	}
+	item-card .item-album-icon{
+		position:absolute;
+		left:5px;
+		top:55px;
+		width:20px !important;
+		max-height:20px !important;
+		background:transparent;
+	}
+	item-card img {
+		width:25% !important;
+		background-color:#333441; 
+	}
+	 
+	item-card .container {
+		padding: 2px 16px;
+		width:74%;
+	}
+	.sweet-alert .icon{
+		width:30%;height:80px;;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-origin: content-box;
+	}
+	.sweet-alert .fa-close{
+		width:20px;
+	}
+	.sweet-alert .music-modal-title{
+		text-align: left;
+		position:absolute;top:40px;left:32%;color:black;
+		font-family: "Raleway-Regular";
+	}
+	.sweet-alert {
+		padding:0px;
+		width:98%;
+		left:1%;
+		margin-left:0px;
+	}
+	h4.list-title{
+		position: absolute;
+		top:5px;
+		left:32%;
+		display: flex;
+		justify-content:flex-start;
+		color:#414a4f;
+		text-align: left;
+		padding-left:0px;
+	}
+	.overlay.desktop{
+		display:none;
+	}
+}
+@media (min-width: 769px){
+	.desktop{
+		display:inline;
+	}
+	.our-work .search-placeholder{
+		height:80vh;
+	}
+	.our-work .search-placeholder p{
+		margin-top:60vh;
+	}
+	.mobile{
+		display: none;
+	}
+	item-card {
+		position: relative;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		transition: 0.3s;
+		height: 300px;
+		background-color: #fff;
+		border-radius: 2px;
+		margin:12px;
+	}
+	
+	item-card:hover {
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	}
+
+	item-card img.img {
+		height:220px;
+		opacity: 1;
+  		transition: .5s ease;
+	}
+	item-card .overlay.desktop {
+		transition: .5s ease;
+		opacity: 0;
+		position: absolute;
+		width:100%;
+		top: 36.5%;
+		left: 50%;
+		height:220px;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%)
+	}
+	item-card .overlay.desktop img {
+		width:50%;
+		height:50%;
+		margin-left:25%;
+		margin-top:20%;
+	}
+	item-card:hover img.img {
+		opacity: 0.1;
+	}
+
+	item-card:hover .overlay.desktop {
+		opacity: 1;
+		background-color:rgba(50,50,50,0.3) 
+	}
+	.text {
+		color: white;
+		text-align:center;
+		font-size: 16px;
+		font-family: "Raleway-Regular";
+		padding: 16px 32px;
+	}
+	item-card .item-artist-icon{
+		position:absolute;
+		left:10px;
+		top:180px;
+		width:20px !important;
+		max-height:20px !important;
+	}
+	item-card .item-album-icon{
+		position:absolute;
+		left:10px;
+		top:180px;
+		width:30px !important;
+		max-height:30px !important;
+	}
+
+	item-card .container {
+		padding: 2px 16px;
+	}
+	.sweet-alert .icon{
+		width:100%;height:40vh;;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-origin: content-box;
+	}
+	.sweet-alert .music-modal-title{
+		text-align: left;
+		position:absolute;top:35vh;left:20px;color:white;
+	}
+	.sweet-alert {
+		padding:0px;
+		width:70%;
+		left:15%;
+		margin-left:0px;
+	}
+	.sweet-alert .fa-close{
+		width:30px;
+	}
+
+}
+/** spinning icon animation for font awesome **/
+.fa-spin-custom, .glyphicon-spin {
+  -webkit-animation: spin 1000ms infinite linear;
+  animation: spin 1000ms infinite linear;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
