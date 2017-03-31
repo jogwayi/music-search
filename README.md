@@ -1,5 +1,5 @@
 # Musics Search
-This small web application demonstrates the features of AngularJS developed using angular version 1.5.0. In this example I'm using controllers, components, services and testing tools as explained below:
+This small web application demonstrates the features of AngularJS developed using angular version 1.5.0 going by the design on ([https://invis.io/XVAJ2MMK7]). In this example I'm using controllers, components, services and testing tools as explained below:
 
 ## Development
 
@@ -25,22 +25,27 @@ This has been used to create the popup. I have customized the stylesheet to fit 
 ### jQuery
 This has been used as a requirement to the Sweetalert library and also to perform some DOM tasks.
 
-## Application partial Structure
+## Application Structure
 
 The application is structured into 3 main components
 
 ### The components
 The application has two components namely the
+
 #### Item Card 
-This contains the single item definition for the search result items. Its designed to have its own methods and designs according to the different screen sizes
+This contains the single item definition for the search result items. Its designed to have its own methods and designs according to the different screen sizes. 
+Each Item Card caches and manages its own data
+
 #### The Landing Page
 The landing page is not expected to dynamically change that much. Actually the only notable changes are in the design for screen sizes.
 
 ### The main views
 There is one main view. This is the entry point of the application and is specified with the route /main
+
 ### The services
 The application uses remote services from `Spotify` ([https://api.spotify.com]). Three endpoints are consumed. 1. Search for albums and artists, 2. Get albums by artist and 3. Get tracks in an album
 
+The reuired libraries are bundled in the app/lib folder.
 ## Testing 
 
 The application includes two testing types.
@@ -57,6 +62,9 @@ The test scripts have a common naming convection - name_of_component.spec. To ex
 To execute the end to end tests execute `npm run protractor` in the terminal at the root of the application.
 Both tests require the application to be running
 The results of executing the tests are included as screenshot images in the test-result folder
+
+## Application in action
+Check the application in use on ([https://jogwayi.github.io/music-search/#!/main#our-work])
 
 
 
